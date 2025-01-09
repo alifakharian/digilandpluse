@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: target;
+  font-family: fn;
+}
+@font-face {
+  font-family: target;
+  src: url("../src/Pages/Fonts/IRANSansWeb_Medium.ttf");
+}
+@font-face {
+  font-family: fn;
+  src: url("../src/Pages/Fonts/IRANSansXFaNum-Regular.ttf");
+}
