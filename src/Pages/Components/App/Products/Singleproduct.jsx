@@ -23,7 +23,7 @@ const Singleproduct = ({ singelproducts, i }) => {
             />
           </div>
         </div>
-        <div className="md:w-[70%] dark:text-white bg-teal-6 flex flex-col justify-start mt-[25px]">
+        <div className="md:w-[70%] px-4 dark:text-white bg-teal-6 flex flex-col justify-start mt-[25px]">
           <div className="text-red-600 dark:text-white text-[20px] font-black">
             {singelproducts.title}
           </div>
@@ -42,12 +42,12 @@ const Singleproduct = ({ singelproducts, i }) => {
           {getProductQty(parseInt(i)) == 0 ? (
             <button
               onClick={() => handlerIncreasproductQty(parseInt(i))}
-              className="btn btn-danger mb-[30px] dark:bg-gray-600 dark:hover:bg-gray-700 duration-700  w-[20%] mt-5"
+              className="btn btn-danger mb-[30px] sm:w-[30%] dark:bg-gray-600 dark:hover:bg-gray-700 duration-700  mt-5"
             >
               افزودن به سبد خرید
             </button>
           ) : (
-            <div className="flex flex-wrap align-items-center gap-8">
+            <div className="flex py-2 flex-wrap align-items-center gap-8">
               <button
                 onClick={() => handlerDecreasproductqty(parseInt(i))}
                 className="btn btn-primary"

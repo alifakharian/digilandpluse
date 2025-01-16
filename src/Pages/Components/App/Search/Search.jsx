@@ -55,7 +55,7 @@ export default function Search() {
            </div>
           </NavLink>
         ) : (
-          <div className="flex flex-row-reverse gap-1  btn btn-danger ml-3 dark:btn-primary">
+          <div className="flex flex-row-reverse gap-1  btn btn-danger mx-3 dark:btn-primary">
             <NavLink
               to="/Login"
               onClick={handleScrollToTop}
