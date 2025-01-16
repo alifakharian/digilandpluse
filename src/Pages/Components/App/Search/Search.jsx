@@ -8,66 +8,67 @@ import { HiUserPlus } from "react-icons/hi2";
 import logodark from "../Images/logo/5.png";
 import { NavLink } from "react-router-dom";
 import { useLoginContext } from "../Context/Login";
+
 export default function Search() {
   const { result, searchhandler, search } = useApicontext();
   const { darkMode, handleScrollToTop } = useDarkmodecontext();
   const { islogin } = useLoginContext();
 
   return (
-    <div className="">
-      <div className="flex  flex-row-reverse flex-wrap justify-between bg-white  dark:bg-slate-900 dark:text-white duration-700 py-6 gap-2">
-        <div className="flex flex-wrap flex-row-reverse">
-          <div>
-            <img
-              src={darkMode ? logodark : logolight}
-              className="w-[200px] h-[40px]"
-            />
-          </div>
-          <div className="flex  flex-row-reverse gap-x-2">
-            <div className="">
-              <button
-                className="dark:bg-blue-500 mr-7 mt-1 bg-rose-600 dark:hover:bg-blue-700 text-white font-bold px-2 rounded-lg w-[30px] h-[30px] duration-700"
-                onClick={result}
-              >
-                <FaSearch />
-              </button>
-            </div>
+    <div className="w-full px-4 py-4 bg-white dark:bg-slate-900 dark:text-white duration-700">
+      {/* Header Section */}
+      <div className="flex flex-wrap justify-between items-center gap-4">
+        {/* Logo Section */}
+        <div className="w-full flex justify-center md:justify-start md:w-auto">
+          <img
+            src={darkMode ? logodark : logolight}
+            className="h-10 object-contain"
+            alt="Logo"
+          />
+        </div>
+
+        {/* Search Bar Section */}
+        <div className="w-full md:w-auto flex flex-col items-center md:flex-row gap-3">
+          <div className="relative flex items-center w-full max-w-md  md:w-[800px]">
             <input
               value={search}
               onChange={searchhandler}
-              className="text-slate-700   dark:placeholder-slate-600 placeholder-rose-300 font-black text-[16px] dark:text-gray-800 border-[3.5px] bg-slate-200 border-rose-200  dark:border-slate-500 outline-none rounded-xl dark:bg-slate-400 text-center py-1
-              smd:w-[200px] sm:w-[300px] lg:w-[500px] 
-              "
+              className="w-full text-gray-700 text-center dark:text-gray-800 bg-slate-200 dark:bg-slate-400 placeholder-rose-300 dark:placeholder-slate-600 font-semibold text-sm border-2 border-rose-200 dark:border-slate-500 rounded-lg px-4 py-2 focus:outline-none"
               placeholder=".... جستجوی محصولات "
             />
+            <button
+              className="absolute right-2 bg-rose-600 dark:bg-blue-500 dark:hover:bg-blue-700 text-white font-bold p-2 rounded-full duration-700"
+              onClick={result}
+            >
+              <FaSearch />
+            </button>
           </div>
         </div>
 
-        {islogin ? (
-          <NavLink
-            to="/User"
-            onClick={handleScrollToTop}
-            className="btn btn-danger  pt-3 ml-3 dark:btn-primary"
-          >
-           <div className="flex gap-1">
-           <div className="text-[20px]"><HiUserPlus/></div>
-           <div className="text-[12px] pt-[2px] font-black">پنل کاربر</div>
-           </div>
-          </NavLink>
-        ) : (
-          <div className="flex flex-row-reverse gap-1  btn btn-danger mx-3 dark:btn-primary">
+        {/* User Action Section */}
+        <div className="w-full md:w-auto flex justify-center md:justify-end gap-3 items-center">
+          {islogin ? (
             <NavLink
-              to="/Login"
+              to="/User"
               onClick={handleScrollToTop}
-              className="text-[14px] font-black"
+              className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
             >
-              ثبت نام
+              <HiUserPlus className="text-xl" />
+              <span className="text-sm">پنل کاربر</span>
             </NavLink>
-            <div className="mt-[2px] text-[20px] font-black">
-              <BiSolidLogInCircle />
+          ) : (
+            <div className="flex items-center gap-2">
+              <NavLink
+                to="/Login"
+                onClick={handleScrollToTop}
+                className="flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-lg"
+              >
+                <BiSolidLogInCircle className="text-xl" />
+                <span className="text-sm">ثبت نام</span>
+              </NavLink>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
