@@ -25,7 +25,7 @@ const Api = ({ children }) => {
       const productsResponse = await client.get("/Product");
       setProducts(productsResponse.data);
     } catch (error) {
-      // console.log("Disconnect to API:", error.message);
+   
     }
   };
 

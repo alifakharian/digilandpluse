@@ -12,7 +12,7 @@ import Contact from "../Contact/Contact.jsx";
 import Searchresult from "../Search/Searchresult.jsx";
 import Logo from "../Logo/Logo.jsx";
 import Login from "../Login/Login.jsx";
-import User from "../Login/User.jsx"
+import User from "../Login/User.jsx";
 
 export default function Wapper() {
   return (

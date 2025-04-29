@@ -57,7 +57,7 @@ export default function Search() {
               <span className="text-sm">پنل کاربر</span>
             </NavLink>
           ) : (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center  gap-2">
               <NavLink
                 to="/Login"
                 onClick={handleScrollToTop}

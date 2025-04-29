@@ -43,7 +43,9 @@ export default function Productbasket({ qty, id }) {
             />
           </Link>
           <div className="flex flex-col">
-            <p className="mt-5 text-rose-600 font-bold dark:text-white">{singelproducts.title}</p>
+            <p className="mt-5 text-rose-600 font-bold dark:text-white">
+              {singelproducts.title}
+            </p>
             <div className="flex gap-2 mt-3 my-2">
               <button
                 onClick={() => handlerDecreasproductqty(id)}
@@ -67,7 +69,9 @@ export default function Productbasket({ qty, id }) {
                 حذف
               </button>
             </div>
-            <div className="text-red-700 font-bold dark:text-white">مجموع قیمت : {singeltotalprice.toLocaleString(3)}</div>
+            <div className="text-red-700 font-bold dark:text-white">
+              مجموع قیمت : {singeltotalprice.toLocaleString(3)}
+            </div>
           </div>
         </div>
         <hr />

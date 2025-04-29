@@ -2,12 +2,8 @@ import { useShoppingcardcontext } from "../Context/ShoppingCard";
 import Updatedcomponent from "./Hoc";
 
 const Singleproduct = ({ singelproducts, i }) => {
-  const {
-    handlerDecreasproductqty,
-    handlerIncreasproductQty,
-    getProductQty,
-    removeCardItems,
-  } = useShoppingcardcontext();
+  const { handlerDecreasproductqty, handlerIncreasproductQty, getProductQty } =
+    useShoppingcardcontext();
 
   return (
     <>
@@ -42,7 +38,7 @@ const Singleproduct = ({ singelproducts, i }) => {
           {getProductQty(parseInt(i)) == 0 ? (
             <button
               onClick={() => handlerIncreasproductQty(parseInt(i))}
-              className="btn btn-danger mb-[30px] sm:w-[30%] dark:bg-gray-600 dark:hover:bg-gray-700 duration-700  mt-5"
+              className="btn btn-danger my-4 sm:w-[30%] dark:bg-gray-600 dark:hover:bg-gray-700 duration-700 "
             >
               افزودن به سبد خرید
             </button>

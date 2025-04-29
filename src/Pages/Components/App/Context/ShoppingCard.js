@@ -55,6 +55,7 @@ const ShoppingCard = ({ children }) => {
   // پاک کردن کل سبد خرید به صورت تک محصول
 
   const removeCardItems = (id) => {
+    // currentitems.filter((item) => item.id !== id);
     setcarditems((elem) => elem.filter((item) => item.id != id));
   };
   //   نمایش کل تعداد محصولات انتخاب شده در بالای صفحه

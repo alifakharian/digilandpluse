@@ -47,8 +47,8 @@ export default function BasketShop() {
       ) : (
         <div className=" dark:bg-slate-900 dark:text-white">
           {carditems &&
-            carditems.map((elem, index) => (
-              <div key={index}>
+            carditems.map((elem) => (
+              <div key={elem.id}>
                 <Productbasket {...elem} />
               </div>
             ))}

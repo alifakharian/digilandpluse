@@ -8,14 +8,9 @@ export const useDarkmodecontext = () => {
 const Darkmode = ({ children }) => {
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem("darkMode");
-    return savedMode === "true"; // مقدار اولیه از localStorage
+    return savedMode === "true"; 
   });
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+ 
 
   useEffect(() => {
     if (darkMode) {
@@ -25,6 +20,12 @@ const Darkmode = ({ children }) => {
     }
     localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <Contextdarkmode.Provider
