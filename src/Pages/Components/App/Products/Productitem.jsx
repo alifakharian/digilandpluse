@@ -22,6 +22,7 @@ const Productitem = () => {
                   />
                   <h1 className="text-red-700 text-start mr-3 dark:text-purple-400 text-[15px] my-1 font-bold">
                     {elem.name}
+                  
                   </h1>
 
                   <div className="text-right font-bold mr-2 leading-6 h-[70px]  text-[11.5px]">

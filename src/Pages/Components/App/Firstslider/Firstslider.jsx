@@ -5,7 +5,6 @@ import Categori from "./Categori";
 import Advertaizment from "./Advertaizment";
 import Mobilecellphone from "./Mobilecellphone";
 
-
 const Slider = () => {
   const slides = [
     "https://res.cloudinary.com/dfhrcwv0i/image/upload/v1734597858/4_p7bquh.webp",
@@ -15,13 +14,11 @@ const Slider = () => {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    setCurrentIndex((elem) => (elem + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
-    );
+    setCurrentIndex((elem) => (elem - 1 + slides.length) % slides.length);
   };
 
   return (
@@ -40,17 +37,15 @@ const Slider = () => {
           ))}
         </div>
         <button className="prev" onClick={prevSlide}>
-        <FaChevronCircleLeft className="text-gray-700 text-[30px] dark:text-gray-500" />
-          
+          <FaChevronCircleLeft className="text-gray-700 text-[30px] dark:text-gray-500" />
         </button>
         <button className="next" onClick={nextSlide}>
-        <FaChevronCircleRight className="text-gray-700 text-[30px] dark:text-gray-500" />
-          
+          <FaChevronCircleRight className="text-gray-700 text-[30px] dark:text-gray-500" />
         </button>
       </div>
-      <Categori/>
-      <Advertaizment/>
-      <Mobilecellphone/>
+      <Categori />
+      <Advertaizment />
+      <Mobilecellphone />
     </>
   );
 };

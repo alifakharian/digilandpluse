@@ -1,16 +1,14 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect } from "react";
+import { useLocalstorage } from "../Hook/useLocalStorage";
 
 const Contextdarkmode = createContext();
+
 export const useDarkmodecontext = () => {
   return useContext(Contextdarkmode);
 };
 
 const Darkmode = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    return savedMode === "true"; 
-  });
- 
+  const [darkMode, setDarkMode] = useLocalstorage("darkMode", false);
 
   useEffect(() => {
     if (darkMode) {
@@ -18,8 +16,8 @@ const Darkmode = ({ children }) => {
     } else {
       document.body.classList.remove("dark");
     }
-    localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
+
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,

@@ -39,7 +39,7 @@ export default function BasketShop() {
   const totalPrice = calculateTotalPrice();
 
   return (
-    <div className="dark:bg-slate-900 duration-700 dark:text-white pb-[112px] dark:pb-[123px]">
+    <div className="dark:bg-slate-900 py-5 duration-700 dark:text-white pb-[112px] dark:pb-[123px]">
       {carditems.length == "" ? (
         <div className="text-center text-red-600 font-bold dark:text-white">
           سبد خرید شما خالی می باشد
