@@ -33,7 +33,7 @@ export default function User() {
               </div>
             </div>
             <img
-              src="https://res.cloudinary.com/dfhrcwv0i/image/upload/v1733557457/1_jhtavp.gif"
+              src={lastUser.avatar}
               className="size-[100px] rounded-full border-2 border-rose-600 dark:border-blue-600"
             />
           </div>
