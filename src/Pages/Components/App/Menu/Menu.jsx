@@ -12,15 +12,15 @@ export default function Menu() {
   const { totalqty } = useShoppingcardcontext();
   const { darkMode, setDarkMode, handleScrollToTop } = useDarkmodecontext();
   useEffect(() => {
-    // const handleResize = () => {
-    //   if (window.innerWidth >= 1024) {
-    //     setIsNavOpen(false); // بستن منوی موبایل در حالت دسکتاپ
-    //   }
-    // };
-    // window.addEventListener("resize", handleResize);
-    // return () => {
-    //   window.removeEventListener("resize", handleResize);
-    // };
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsNavOpen(false); // بستن منوی موبایل در حالت دسکتاپ
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -83,7 +83,7 @@ export default function Menu() {
             <ul className="mt-20 space-y-5 text-right px-5 text-white">
               <li>
                 <NavLink
-                  to="/digilandpluse"
+                  to="/"
                   onClick={() => setIsNavOpen(false)}
                   className={({ isActive }) =>
                     isActive
@@ -134,7 +134,7 @@ export default function Menu() {
                       ? "bg-red-600 dark:bg-gray-400 text-white rounded-md px-2 py-1"
                       : "text-rose-600 dark:text-white px-2 py-1"
                   }
-                  to="/digilandpluse"
+                  to="/"
                 >
                   صفحه اصلی
                 </NavLink>
@@ -167,7 +167,7 @@ export default function Menu() {
               </li>
             </ul>
             <div className="ml-3 flex gap-x-[20px]">
-              {/* <NavLink
+              <NavLink
                 to="/BasketShop"
                 onClick={handleScrollToTop}
                 className="relative"
@@ -178,7 +178,7 @@ export default function Menu() {
                     {totalqty}
                   </div>
                 )}
-              </NavLink> */}
+              </NavLink>
               <button
                 onClick={() => setDarkMode(!darkMode)}
                 className="flex items-center"

@@ -34,7 +34,7 @@ export default function Wapper() {
             <Route path="/Searchresult" element={<Searchresult />} />
             <Route path="/User" element={<User />}></Route>
             <Route path="/Register" element={<Register />} />
-            <Route path="/digilandpluse" element={<Firstslider />} />
+            <Route path="/" element={<Firstslider />} />
             <Route path="/Allusers" element={<Allusers />} />
             <Route path="/Allusers/:id" element={<Singleperson />} />
             <Route path="/*" element={<Notfound />} />

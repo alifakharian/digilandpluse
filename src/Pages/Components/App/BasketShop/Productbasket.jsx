@@ -2,6 +2,7 @@ import { Showsingleproduct } from "../../../../API/ProductApi";
 import { useShoppingcardcontext } from "../Context/ShoppingCard";
 import { Link } from "react-router-dom";
 import Loading from "../Products/Loading";
+import { MdDeleteForever } from "react-icons/md";
 
 export default function Productbasket({ qty, id }) {
   const {
@@ -19,7 +20,7 @@ export default function Productbasket({ qty, id }) {
 
   return (
     <div dir="rtl">
-      {/* <div className="flex py-5 gap-6 flex-wrap">
+      <div className="flex py-5 gap-6 flex-wrap">
         <Link to={`/Products/${id}`}>
           <img
             src={singelproducts?.image}
@@ -47,9 +48,9 @@ export default function Productbasket({ qty, id }) {
             </button>
             <button
               onClick={() => removeCardItems(id)}
-              className="btn btn-danger dark:bg-gray-400"
+              className="text-[35px] text-rose-600 dark:text-gray-300"
             >
-              حذف
+              <MdDeleteForever />
             </button>
           </div>
           <div className="text-red-700 font-bold dark:text-white">
@@ -60,7 +61,7 @@ export default function Productbasket({ qty, id }) {
       <hr />
       <hr />
       <hr />
-      <hr /> */}
+      <hr />
     </div>
   );
 }

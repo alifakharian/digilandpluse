@@ -1,14 +1,14 @@
-
 import { useShoppingcardcontext } from "../Context/ShoppingCard.jsx";
+import Productbasket from "./Productbasket.jsx";
 
 export default function BasketShop() {
-  // const { carditems } = useShoppingcardcontext();
+  const { carditems } = useShoppingcardcontext();
 
   // محاسبه مجموع کل قیمت‌ها
 
   return (
     <>
-      {/* <div className="dark:bg-slate-900 py-5 duration-700 dark:text-white pb-[112px] dark:pb-[123px]">
+      <div className="dark:bg-slate-900 py-5 duration-700 dark:text-white pb-[112px] dark:pb-[123px]">
         {carditems.length == "" ? (
           <div className="text-center text-red-600 font-bold dark:text-white">
             سبد خرید شما خالی می باشد
@@ -29,7 +29,7 @@ export default function BasketShop() {
             </button>
           </div>
         )}
-      </div> */}
+      </div>
     </>
   );
 }

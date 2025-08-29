@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import { useSearchcontext } from "../Context/Search";
 import { usePannelcontext } from "../Context/Userpannel.jsx";
 
-
 export default function SearchHeader() {
   const { darkMode, handleScrollToTop } = useDarkmodecontext();
   const { onSubmit, register, handleSubmit, offers, showOffers, selectOffer } =
