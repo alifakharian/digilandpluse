@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { MdMarkEmailRead } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 import BasketShop from "../BasketShop/BasketShop";
+import { IoMdPerson } from "react-icons/io";
 
 
 export default function User() {
@@ -32,10 +33,11 @@ export default function User() {
                 </p>
               </div>
             </div>
-            <img
-              src={lastUser.avatar}
+            {/* <img
+              src="https://res.cloudinary.com/dfhrcwv0i/image/upload/v1733557457/1_jhtavp.gif"
               className="size-[100px] rounded-full border-2 border-rose-600 dark:border-blue-600"
-            />
+            /> */}
+            <IoMdPerson className="size-[60px] text-rose-600 dark:text-blue-600 rounded-full p-1 border-2 border-rose-600 dark:border-blue-600"/>
           </div>
           <div>
             <MdMarkEmailRead className="size-[40px] bg-rose-600 dark:bg-blue-600 text-white rounded-full p-1" />
