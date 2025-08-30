@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Menu from "../Menu/Menu.jsx";
 import Products from "../Products/Products.jsx";
 import Singleproduct from "../Products/Singleproduct.jsx";
@@ -19,7 +19,7 @@ import Singleperson from "../Userpannel/Singleperson.jsx";
 export default function Wapper() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <AppProviders>
           <Logo />
           <div className="top-0 sticky z-10">
@@ -41,7 +41,7 @@ export default function Wapper() {
           </Routes>
           <Footer />
         </AppProviders>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
